@@ -1,5 +1,5 @@
-from c import menu	
+from menu import Menu	
 
 
-menu()
+Menu()
 

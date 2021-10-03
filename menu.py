@@ -1,4 +1,5 @@
-from	b import Team
+from	usuarios import Usuarios
+from	bots import Bots
 import sys          #libreria para limpiar pantalla
 import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
@@ -7,7 +8,7 @@ import os           #libreria para el uso del os.system('cls')
 
 
 
-def menu():
+def Menu():
 	op=0
 	salir=4
 	while op!=salir:
@@ -18,10 +19,12 @@ def menu():
 		print("4.- Salir")
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
-			x=Team()
+			x=Usuarios()
+			y=Bots()
 			pass
 		elif op==2:
-			mostrar()
+			# mostrar()
+			y.visual()
 			pass
 		elif op==3:
 			jugar()
