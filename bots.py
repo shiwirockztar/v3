@@ -18,12 +18,18 @@ class Bots:
 	tamaño=0
 	# Team=[]
 
-	def __init__(self,x):
-		self.conductor=drivs[x]
-		self.carro=cars[x]
-		self.carril=x
-		pass
+	def __init__(self):
+		r=random.randint(2, 6)
+		print("el numero de rivales es ",r)
+		self.tamaño=r
+		for x in range(r):
+			a=self.rival(x)
+			# los objetos (rivales) creados se convierten en una lista
+			# self.Team.append(a)
+			Team.append(a)
 
+			pass
+		print(Team)
 
 	def rival(self,x):
 		self.conductor=drivs[x]
