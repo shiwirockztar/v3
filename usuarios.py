@@ -3,12 +3,6 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
-global lista
-lista= list()
-# listas ejemplos
-cars=["redbull","lamborghini","ferrari","BMW","sauber","porsche","mclaren"]
-drivs=["montoya","vettel","schumacher","hamilton","alonzo","speedy"]
-
 # definimos los atributos
 class Usuarios:
 	"""usuario"""

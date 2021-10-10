@@ -36,11 +36,13 @@ def Menu():
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
 			x=Usuarios()
-			creacion()
+			# creacion()
+			y=Bots()
 			pass
 		elif op==2:
 			x.mostrar()
-			display()
+			# display()
+			y.creacionx()
 			pass
 		elif op==3:
 			jugar()
