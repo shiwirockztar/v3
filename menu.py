@@ -11,7 +11,7 @@ def creacion():
 	r=random.randint(2, 6)
 	print("el numero de rivales es ",r)
 	for x in range(r):
-		a=Bots()
+		a=Bots(x)
 		# los objetos (rivales) creados pasan a una lista
 		rivals.append(a)
 
@@ -33,7 +33,7 @@ def Menu():
 			pass
 		elif op==2:
 			# mostrar()
-			y.display()
+			print(rivals)
 			pass
 		elif op==3:
 			jugar()
