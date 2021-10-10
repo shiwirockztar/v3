@@ -5,8 +5,17 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
+rivals=[]
 
+def creacion():
+	r=random.randint(2, 6)
+	print("el numero de rivales es ",r)
+	for x in range(r):
+		a=Bots()
+		# los objetos (rivales) creados pasan a una lista
+		rivals.append(a)
 
+		pass
 
 def Menu():
 	op=0
@@ -20,11 +29,11 @@ def Menu():
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
 			x=Usuarios()
-			y=Bots()
+			creacion()
 			pass
 		elif op==2:
 			# mostrar()
-			y.visual()
+			y.display()
 			pass
 		elif op==3:
 			jugar()

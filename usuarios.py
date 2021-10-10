@@ -27,4 +27,8 @@ class Usuarios:
 		# self.usuario=False	
 		pass
 
+	def display(self):
+		pass
+
+
 	
