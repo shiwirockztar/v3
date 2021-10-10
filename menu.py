@@ -17,6 +17,13 @@ def creacion():
 
 		pass
 
+def display():
+	# print("este es la visual de datos")
+	for a in rivals:
+		print("El jugador ",a.conductor," juega con el carro ",a.carro,"en el carril ",a.carril) 
+		pass
+
+
 def Menu():
 	op=0
 	salir=4
@@ -32,8 +39,8 @@ def Menu():
 			creacion()
 			pass
 		elif op==2:
-			# mostrar()
-			print(rivals)
+			x.mostrar()
+			display()
 			pass
 		elif op==3:
 			jugar()

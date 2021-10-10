@@ -10,6 +10,7 @@ cars=["redbull","lamborghini","ferrari","BMW","sauber","porsche","mclaren"]
 drivs=["montoya","vettel","schumacher","hamilton","alonzo","speedy"]
 Team=[]
 
+# definimos los atributos
 class Bots:
 	"""bots"""
 	carro=""
@@ -23,7 +24,6 @@ class Bots:
 		self.carro=cars[x]
 		self.carril=x
 		pass
-
 
 	def rival(self,x):
 		self.conductor=drivs[x]
@@ -40,14 +40,5 @@ class Bots:
 
 
 	def display(self):
-		# print("este es la visual de datos")
-		for x in Team:
-			print("El jugador ",x[0]," juega con el carro ",x[1],"en el carril ",x[2])
-			pass
 
-		print("---------------   modo lista de objetos  ---------------")
-
-
-		for a in lista:
-			print("El jugador ",a.conductor," juega con el carro ",a.carro,"en el carril ",a.carril) 
-			pass
+		pass

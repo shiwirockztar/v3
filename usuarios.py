@@ -27,7 +27,15 @@ class Usuarios:
 		# self.usuario=False	
 		pass
 
-	def display(self):
+	def mostrar(self):
+		print("El jugador ",self.conductor," juega con el carro ",self.carro,"en el carril ",self.carril) 
+		pass
+
+	def jugar():
+		players=random.randint(4, 6)
+		pista=random.randint(69, 100)
+		print("la pista mide ",pista*100," mts")
+		os.system('pause')	
 		pass
 
 
