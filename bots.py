@@ -37,7 +37,6 @@ class Bots:
 			t=Bots(x)
 			challengers.append(t)
 			pass
-		pass
 
 	def visual(self):
 		print("imprimiendo x visual")

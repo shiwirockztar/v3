@@ -18,6 +18,19 @@ ____________________________________________________
 ____________________________________________________
          """
 
+rivals=[]
+
+def creacion():
+	r=random.randint(2, 6)
+	print("el numero de rivales es ",r)
+	for x in range(r):
+		a=Bots()
+		# los objetos (rivales) creados pasan a una lista
+		rivals.append(a)
+
+		pass
+
+
 def Menu():
 	op=0
 	while True:
@@ -25,7 +38,6 @@ def Menu():
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
 			x=Usuarios()
-			# print("el carril elegido fue ",x.carril)
 			y=Bots()
 			# z=Bots()
 			# z.rival()
@@ -33,7 +45,11 @@ def Menu():
 			x.mostrar()
 			# y.display()
 			y.visual()
-			
+			pass
+		elif op==2:
+			# mostrar()
+			y.display()
+			pass
 		elif op==3:
 			jugar()
 
