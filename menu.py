@@ -5,7 +5,9 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
-carril=[0,1,2,3,4,5]
+global lista
+lista= list()
+
 menu = """
 ====================================================
                          Menu
@@ -18,29 +20,20 @@ ____________________________________________________
 ____________________________________________________
          """
 
-rivals=[]
-
-def creacion():
-	r=random.randint(2, 6)
-	print("el numero de rivales es ",r)
-	for x in range(r):
-		a=Bots()
-		# los objetos (rivales) creados pasan a una lista
-		rivals.append(a)
-
-		pass
-
-
 def Menu():
 	op=0
 	while True:
 		print(menu)
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
-			x=Usuarios()
 			y=Bots()
+			print("--------- la partida cuenta con ",y.tamaño," carriles -----------")
+			creacion(y.tamaño)
+			x=Usuarios()
+			y.setCarril(x.carril)
 			# z=Bots()
 			# z.rival()
+
 		elif op==2:
 			x.mostrar()
 			# y.display()
@@ -63,3 +56,14 @@ def Menu():
 		pass
 		os.system('cls')
 	pass
+
+
+def creacion(tamaño):
+	
+	for x in range(tamaño):
+		print(x)
+		if x=-:
+			pass
+		# rivals.append(a)
+
+		pass

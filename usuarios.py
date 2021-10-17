@@ -11,8 +11,7 @@ class Usuarios:
 	carril=0
 
 	def __init__(self):
-		
-		print("creando equipo")	
+
 		self.conductor=input("Por favor introduzca su nombre a elegir\n")
 		self.carro=input("Por favor introduzca el nombre de equipo o escuderia\n")
 		self.carril=int(input("Por favor introduzca la posiciona o carril a elegir\n"))	

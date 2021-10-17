@@ -18,6 +18,7 @@ class Bots:
 	carril=0
 	tamaño=0
 
+
 	def __init__(self,x="default"):
 		
 		if x=="default":
@@ -32,17 +33,27 @@ class Bots:
 		pass
 
 	def rival(self):
-		r=random.randint(2, 6)
+		r=random.randint(3, 6)
+		self.tamaño=r
 		for x in range(r):
 			t=Bots(x)
 			challengers.append(t)
 			pass
 
 	def visual(self):
-		print("imprimiendo x visual")
 		for x in challengers:
 			print("El conductor ",x.conductor," juega con el carro ",x.carro,"en el carril ",x.carril) 
 			pass
+		pass
+
+	def setCarril(self,via):			
+		for x in challengers:
+			if x.carril==via:
+				x.carril=self.tamaño
+			pass
+		pass
+
+	def exportacion():
 		pass
 
 # ________________________________ metodo para crear y mostrar de manera distinta______________________
