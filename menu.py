@@ -5,54 +5,45 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
-rivals=[]
-
-def creacion():
-	r=random.randint(2, 6)
-	print("el numero de rivales es ",r)
-	for x in range(r):
-		a=Bots(x)
-		# los objetos (rivales) creados pasan a una lista
-		rivals.append(a)
-
-		pass
-
-def display():
-	# print("este es la visual de datos")
-	for a in rivals:
-		print("El jugador ",a.conductor," juega con el carro ",a.carro,"en el carril ",a.carril) 
-		pass
-
+carril=[0,1,2,3,4,5]
+menu = """
+====================================================
+                         Menu
+____________________________________________________
+1.|               Registrar jugador
+2.|               Mostrar competidores
+3.|               Jugar
+____________________________________________________
+4.|               Salir
+____________________________________________________
+         """
 
 def Menu():
 	op=0
-	salir=4
-	while op!=salir:
-		print("Menu")
-		print("1.- Registrar jugador")
-		print("2.- Mostrar competidores")
-		print("3.- Jugar")
-		print("4.- Salir")
+	while True:
+		print(menu)
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
 			x=Usuarios()
-			# creacion()
+			# print("el carril elegido fue ",x.carril)
 			y=Bots()
-			pass
+			# z=Bots()
+			# z.rival()
 		elif op==2:
 			x.mostrar()
-			# display()
-			y.creacionx()
-			pass
+			# y.display()
+			y.visual()
+			
 		elif op==3:
 			jugar()
-			pass
+
 		elif op==4:
-			salir()
-			pass
+			break
+			
 		if op==9:
 			buscar()
-			pass
 
+		os.system('pause')
 		pass
+		os.system('cls')
 	pass

@@ -9,16 +9,14 @@ class Usuarios:
 	carro=""
 	conductor=""
 	carril=0
-	
-	# usuario=True
 
 	def __init__(self):
 		
 		print("creando equipo")	
 		self.conductor=input("Por favor introduzca su nombre a elegir\n")
 		self.carro=input("Por favor introduzca el nombre de equipo o escuderia\n")
-		self.carril=int(input("Por favor introduzca la posiciona o carril a elegir\n"))
-		# self.usuario=False	
+		self.carril=int(input("Por favor introduzca la posiciona o carril a elegir\n"))	
+
 		pass
 
 	def mostrar(self):
