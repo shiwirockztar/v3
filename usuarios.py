@@ -9,13 +9,14 @@ class Usuarios:
 	carro=""
 	conductor=""
 	carril=0
+	usuario=[]
 
 	def __init__(self):
 
 		self.conductor=input("Por favor introduzca su nombre a elegir\n")
 		self.carro=input("Por favor introduzca el nombre de equipo o escuderia\n")
 		self.carril=int(input("Por favor introduzca la posiciona o carril a elegir\n"))	
-
+		
 		pass
 
 	def mostrar(self):

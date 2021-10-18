@@ -5,8 +5,7 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
-global lista
-lista= list()
+vs=[]
 
 menu = """
 ====================================================
@@ -26,18 +25,23 @@ def Menu():
 		print(menu)
 		op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
-			y=Bots()
-			print("--------- la partida cuenta con ",y.tamaño," carriles -----------")
-			creacion(y.tamaño)
-			x=Usuarios()
-			y.setCarril(x.carril)
-			# z=Bots()
-			# z.rival()
+# *********************** creacion de competidores *************************					
+			x=Bots()
+			print("--------- la partida cuenta con ",x.tamaño+1," carriles -----------")
+			y=Usuarios()
+# ************************ modificando carril repetido de 1 rival ************ 		
 
+			x.setCarril(y.carril)
+
+# ************************ modificando carril repetido de 1 rival ************ 
+			vs=x.Import(y.conductor,y.carro,y.carril)
+		
 		elif op==2:
-			x.mostrar()
-			# y.display()
-			y.visual()
+			print(vs)
+			x.visual()
+			y.mostrar()
+
+			
 			pass
 		elif op==2:
 			# mostrar()
@@ -61,9 +65,7 @@ def Menu():
 def creacion(tamaño):
 	
 	for x in range(tamaño):
-		print(x)
-		if x=-:
-			pass
+
 		# rivals.append(a)
 
 		pass

@@ -53,7 +53,18 @@ class Bots:
 			pass
 		pass
 
-	def exportacion():
+	def export(self):
+		for x in challengers:
+			lista.append([x.conductor,x.carro,x.carril])
+			pass
+		pass
+
+	def Import(self,cnd,car,via):
+		
+		lista.append([cnd,car,via])
+		self.export()
+		# print(lista)	
+		return lista
 		pass
 
 # ________________________________ metodo para crear y mostrar de manera distinta______________________
