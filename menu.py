@@ -5,6 +5,8 @@ import time         #libreria para el uso del time.sleep()
 import random       #libreria para el uso de los numero aleatorios
 import os           #libreria para el uso del os.system('cls')
 
+pista=random.randint(69, 100)
+
 vs=[]
 
 menu = """
@@ -22,8 +24,11 @@ ____________________________________________________
 def Menu():
 	op=0
 	while True:
+		print("la pista mide ",pista*100," mts")
+		print()
 		print(menu)
-		op=int(input("Por favor introduzca la opcion a elegir\n"))
+		op=op+1
+		# op=int(input("Por favor introduzca la opcion a elegir\n"))
 		if op==1:
 # *********************** creacion de competidores *************************					
 			x=Bots()
@@ -34,10 +39,12 @@ def Menu():
 			x.setCarril(y.carril)
 
 # ************************ modificando carril repetido de 1 rival ************ 
+# *************** y aqui en la lista vs ya estan ordenados por orden de vias ************ 
 			vs=x.Import(y.conductor,y.carro,y.carril)
+
 		
 		elif op==2:
-			print(vs)
+			
 			x.visual()
 			y.mostrar()
 
@@ -63,9 +70,10 @@ def Menu():
 
 
 def creacion(tamaño):
-	
 	for x in range(tamaño):
-
-		# rivals.append(a)
-
 		pass
+
+def jugar():
+
+	os.system('pause')	
+	pass

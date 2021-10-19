@@ -10,14 +10,16 @@ cars=["redbull","lamborghini","ferrari","BMW","sauber","porsche","mclaren"]
 drivs=["montoya","vettel","schumacher","hamilton","alonzo","speedy"]
 challengers=[]
 
+
 # definimos los atributos
 class Bots:
 	"""bots"""
+	
 	carro=""
 	conductor=""
 	carril=0
 	tamaño=0
-
+	track=[]
 
 	def __init__(self,x="default"):
 		
@@ -35,6 +37,9 @@ class Bots:
 	def rival(self):
 		r=random.randint(3, 6)
 		self.tamaño=r
+		# ------- aqui crea una lista desde 0 hasta el tamaño+1 ------
+		self.track=list(range(self.tamaño+1))
+	
 		for x in range(r):
 			t=Bots(x)
 			challengers.append(t)
@@ -59,12 +64,15 @@ class Bots:
 			pass
 		pass
 
+# ------------- envia los objetos como una lista ---------------
 	def Import(self,cnd,car,via):
 		
 		lista.append([cnd,car,via])
 		self.export()
-		# print(lista)	
-		return lista
+		# print(lista)
+		for x in lista:
+			self.track[x[2]]=x	
+		return self.track
 		pass
 
 # ________________________________ metodo para crear y mostrar de manera distinta______________________
