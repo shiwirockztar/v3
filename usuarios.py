@@ -30,6 +30,10 @@ class Usuarios:
 		os.system('pause')	
 		pass
 		
-
+	def enlist(self,k):
+		if k==self.carril:
+			print("El conductor ",self.conductor," juega con el carro ",self.carro,"en el carril ",self.carril)
+			pass
+		pass
 
 	

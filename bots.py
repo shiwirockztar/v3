@@ -9,6 +9,7 @@ lista= list()
 cars=["redbull","lamborghini","ferrari","BMW","sauber","porsche","mclaren"]
 drivs=["montoya","vettel","schumacher","hamilton","alonzo","speedy"]
 challengers=[]
+t=[]
 
 
 # definimos los atributos
@@ -53,6 +54,7 @@ class Bots:
 
 	def setCarril(self,via):			
 		for x in challengers:
+			
 			if x.carril==via:
 				x.carril=self.tamaño
 			pass
@@ -72,6 +74,7 @@ class Bots:
 		# print(lista)
 		for x in lista:
 			self.track[x[2]]=x	
+		print("el selftrack es ",self.track)
 		return self.track
 		pass
 
@@ -86,6 +89,23 @@ class Bots:
 			pass
 		pass
 
+# ________________________________ metodo para ORGANIZAR una coleccion______________________
+# ----------------------------------------------de un grupo de objetos ----------------------------------
+	def enlist(self,k):
+		for x in challengers:
+			if k==x.carril:
+				print("El conductor ",x.conductor," juega con el carro ",x.carro,"en el carril ",x.carril)
+				pass
+			pass
+		pass
+
+	def play(self,k):
+		for x in challengers:
+			if k==x.carril:
+				print("El conductor ",x.conductor," juega con el carro ",x.carro,"en el carril ",x.carril)
+				pass
+			pass		
+		pass
 
 
 

@@ -33,31 +33,34 @@ def Menu():
 # *********************** creacion de competidores *************************					
 			x=Bots()
 			print("--------- la partida cuenta con ",x.tamaño+1," carriles -----------")
-			y=Usuarios()
 # ************************ modificando carril repetido de 1 rival ************ 		
-
+			y=Usuarios()
 			x.setCarril(y.carril)
 
 # ************************ modificando carril repetido de 1 rival ************ 
 # *************** y aqui en la lista vs ya estan ordenados por orden de vias ************ 
-			vs=x.Import(y.conductor,y.carro,y.carril)
 
+			# vs=x.Import(y.conductor,y.carro,y.carril)
 		
 		elif op==2:
+			# x.visual()
+			# y.mostrar()
+			for k in range(x.tamaño+1):
+				x.enlist(k)
+				y.enlist(k)
+				pass
 			
-			x.visual()
-			y.mostrar()
-
-			
-			pass
-		elif op==2:
-			# mostrar()
-			y.display()
 			pass
 		elif op==3:
+			for k in range(x.tamaño+1):
+				x.play(k)
+				y.play(k)
+				pass
+			pass
+		elif op==4:
 			jugar()
 
-		elif op==4:
+		elif op==6:
 			break
 			
 		if op==9:
