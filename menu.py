@@ -52,6 +52,10 @@ def Menu():
 			
 			pass
 		elif op==3:
+# *********************************************
+			# while min()<x.tamaño:
+			# 	pass
+# *************************************			
 			for k in range(x.tamaño+1):
 				x.play(k)
 				y.play(k)

@@ -20,7 +20,10 @@ class Bots:
 	conductor=""
 	carril=0
 	tamaño=0
+	kms=0
+	posicion=0
 	track=[]
+	pos=0
 
 	def __init__(self,x="default"):
 		
@@ -31,13 +34,15 @@ class Bots:
 		if x!="default":
 			self.conductor=drivs[x]
 			self.carro=cars[x]
-			self.carril=x			
+			self.carril=x
+			self.kms=0			
 			pass
 		pass
 
 	def rival(self):
 		r=random.randint(3, 6)
 		self.tamaño=r
+		self.pos=0
 		# ------- aqui crea una lista desde 0 hasta el tamaño+1 ------
 		self.track=list(range(self.tamaño+1))
 	
@@ -102,9 +107,21 @@ class Bots:
 	def play(self,k):
 		for x in challengers:
 			if k==x.carril:
-				print("El conductor ",x.conductor," juega con el carro ",x.carro,"en el carril ",x.carril)
+				x.kms+=random.randint(1, 6)
+				self.podio(x.kms)
+				print(x.conductor," por el carril ",x.carril," lleva ",x.kms," kms")
 				pass
 			pass		
+		pass
+
+	def podio(self,k):
+		if (k>=self.tamaño):
+			self.pos+=1
+			self.posicion=self.pos
+			pass
+		pass
+
+	def premiacion(self):
 		pass
 
 
