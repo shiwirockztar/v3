@@ -35,7 +35,8 @@ class Bots:
 			self.conductor=drivs[x]
 			self.carro=cars[x]
 			self.carril=x
-			self.kms=0			
+			self.kms=0
+			self.posicion=0			
 			pass
 		pass
 
@@ -106,12 +107,17 @@ class Bots:
 
 	def play(self,k):
 		for x in challengers:
+			final=False
 			if k==x.carril:
 				x.kms+=random.randint(1, 6)
 				self.podio(x.kms)
 				print(x.conductor," por el carril ",x.carril," lleva ",x.kms," kms")
 				pass
-			pass		
+			if self.pos>=3:
+				final=True
+				pass
+			pass
+		return final		
 		pass
 
 	def podio(self,k):

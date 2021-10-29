@@ -8,6 +8,7 @@ import os           #libreria para el uso del os.system('cls')
 pista=random.randint(69, 100)
 
 vs=[]
+fin=0
 
 menu = """
 ====================================================
@@ -55,10 +56,13 @@ def Menu():
 # *********************************************
 			# while min()<x.tamaño:
 			# 	pass
-# *************************************			
-			for k in range(x.tamaño+1):
-				x.play(k)
-				y.play(k)
+# *************************************	
+			fin=False		
+			while (not fin):
+				for k in range(x.tamaño+1):
+					fin=x.play(k)
+					y.play(k)
+					pass
 				pass
 			pass
 		elif op==4:
